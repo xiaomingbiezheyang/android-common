@@ -156,10 +156,10 @@ public class ShellUtils {
                 errorResult = new BufferedReader(new InputStreamReader(process.getErrorStream()));
                 String s;
                 while ((s = successResult.readLine()) != null) {
-                    successMsg.append(s);
+                    successMsg.append(s+COMMAND_LINE_END);//modify by pp.liu for line end 20181220
                 }
                 while ((s = errorResult.readLine()) != null) {
-                    errorMsg.append(s);
+                    errorMsg.append(s+COMMAND_LINE_END);//modify by pp.liu for line end 20181220
                 }
             }
         } catch (IOException e) {
